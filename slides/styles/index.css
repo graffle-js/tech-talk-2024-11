@@ -1,0 +1,33 @@
+:root {
+	--slidev-slide-container-background: #1b1b1f;
+	--slidev-theme-primary: white;
+
+	--prism-font-size: 0.75em;
+	--prism-line-height: 0.8;
+	--slidev-code-line-height: 0;
+}
+
+.slidev-code {
+	--slidev-code-background: #1b1b1f;
+}
+
+.shiki {
+	background: hsla(0, 0%, 0%, 0.15)!important;
+}
+.shiki .line {
+	display: block;
+}
+
+html.dark #slideshow {
+	background: #1b1b1f;
+}
+
+._col {
+	display: flex;
+	flex-direction: column;
+	min-height: 0;
+}
+
+.slidev-layout {
+	padding: 0;
+}

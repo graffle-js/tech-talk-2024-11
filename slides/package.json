@@ -1,0 +1,18 @@
+{
+  "name": "graffle",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "slidev build",
+    "dev": "slidev --open",
+    "export": "slidev export"
+  },
+  "dependencies": {
+    "@slidev/cli": "^0.50.0-beta.6",
+    "@slidev/theme-default": "latest",
+    "@slidev/theme-seriph": "latest",
+    "graffle": "8.0.0-next.116",
+    "tsx": "^4.19.2",
+    "vue": "^3.5.12"
+  }
+}
