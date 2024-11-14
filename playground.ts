@@ -1,5 +1,5 @@
 import { Graffle } from 'graffle'
-import { schema } from './assets/pokemon-schema/schema.js'
+import { schema } from './demos/assets/pokemon-schema/schema.js'
 
 const graffle = Graffle.create({
   schema,
