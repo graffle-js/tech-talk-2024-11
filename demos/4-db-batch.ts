@@ -6,11 +6,8 @@ const graffle = Graffle.create({
 })
 
 const data = await graffle.query.$batch({
-  battles: {
-    __typename: true,
-    ___on_BattleRoyale: {
-      id: true,
-    },
+  trainers: {
+    name: true,
   },
   pokemons: {
     name: true,

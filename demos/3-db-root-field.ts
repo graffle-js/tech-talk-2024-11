@@ -11,3 +11,8 @@ const data = await graffle.query.pokemons({
 })
 
 console.log(data)
+
+// Aliases
+// Directives
+// Unions
+// Inline Fragments
