@@ -1,7 +1,7 @@
 import { IsNever, UnionToTuple } from 'type-fest'
 import { _ } from '../../prelude.js'
 
-type Example<$Extension extends Extension> = $Extension['mixin'] & {
+type Sushi<$Extension extends Extension> = $Extension['mixin'] & {
   property1: string
   property2: number
 }
@@ -13,7 +13,7 @@ export namespace Sushi {
   // export const create = <$Name extends Registry.Names>(
   export const create = <$Name extends string>(
     name: Registry.ValidateName<$Name>,
-  ): Example<Registry.Get<$Name>> => {
+  ): Sushi<Registry.Get<$Name>> => {
     name // do something with name
     return _
   }
@@ -60,6 +60,15 @@ declare global {
 }
 
 interface Extension {
+  /**
+   * @remarks Notice there is the potential for more extension fields.
+   * Currently our extension system will only mixin the `mixin` property into
+   * the Sushi instance. We could imagine other "extensibility points" in the future.
+   * that are "exposed" to the extension author via new properties here.
+   *
+   * In effect, we can think of properties here as being "hooks" into extending
+   * various parts of the Sushi instance.
+   */
   mixin: object
 }
 
