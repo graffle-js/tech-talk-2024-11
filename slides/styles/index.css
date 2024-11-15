@@ -27,3 +27,7 @@ html.dark #slideshow {
 	flex-direction: column;
 	min-height: 0;
 }
+
+h1 {
+	line-height: 1.5!important;
+}

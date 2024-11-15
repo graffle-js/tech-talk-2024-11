@@ -32,8 +32,14 @@ hideInToc: true
 ---
 
 <img src="./assets/jason.png" class="w-50 rounded-full inline-block"  />
-<p>Jason Kuhrt</p>
-<p>🇨🇦 🏔️</p>
+
+`Me = Jason Kuhrt`
+
+`Based = Montreal`
+
+`Ex = Prisma | Dialogue | littleBits | ...`
+
+`Creator = Paka | Graffle | Molt | Dripip | Nexus | ...`
 
 <!--
 - First off a bit about me
