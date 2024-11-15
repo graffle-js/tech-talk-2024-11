@@ -244,14 +244,35 @@ layout: statement
 layout: statement
 ---
 
-# TS Technique 4: Generated Types
+# TS Technique 4: Type Testing
+
 
 ---
 layout: statement
 ---
 
-# TS Technique 5: Type Testing
+# TS Technique 5: Generated Types
 
+---
+
+# Where To Learn Advanced TypeScript?
+
+### Paid
+
+- [Total TypeScript course](https://www.totaltypescript.com) (paid, get your company to cover it?)
+- TypeScript books? (Ones I am aware of are focused on application level, not helpful for this)
+
+### Free
+
+- Write your own **libraries**, practice practice practice.
+- ... Write more of your own **libraries**, practice practice practice.
+- When you get stuck, ask questions on Stack Overflow, hardest ones always answered by [jcalz](https://stackoverflow.com/users/2887218/jcalz)
+  - (use [TypeScript Bug Workbench](https://www.typescriptlang.org/dev/bug-workbench/) to share scenarios)
+- When you get stuck (2), ask questions on [TypeScript Discord](https://discord.com/invite/typescript).
+- A few excellent articles by Andrea Simone Costa https://andreasimonecosta.dev/posts/
+- Read TypeScript code of libraries you use e.g. [Zod](https://github.com/colinhacks/zod), [ArkType](https://github.com/arktypeio/arktype), [Graffle](https://github.com/graffle-js/graffle), [Effect](https://github.com/Effect-TS/effect), etc.
+
+_Also maybe in the future_: I would like to start writing my own articles at https://kuhrt.me/writing
 
 ---
 
@@ -281,6 +302,8 @@ layout: statement
 
 # Thanks!
 
-### https://graffle.js.org
+### This Talk: https://github.com/graffle-js/tech-talk-2024-11
 
-### https://bsky.app/profile/kuhrt.me
+### Graffle: https://graffle.js.org
+
+### Me: https://bsky.app/profile/kuhrt.me
