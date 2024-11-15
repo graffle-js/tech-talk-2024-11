@@ -4,6 +4,9 @@ dependencies:
   '@slidev/cli':
     specifier: ^0.50.0-beta.6
     version: 0.50.0-beta.6(@types/markdown-it@14.1.2)(postcss@8.4.49)
+  '@slidev/theme-apple-basic':
+    specifier: ^0.25.1
+    version: 0.25.1
   '@slidev/theme-default':
     specifier: latest
     version: 0.25.0
@@ -1449,6 +1452,15 @@ packages:
     resolution: {integrity: sha512-a/CbVmjuoO3E4JbUr2HOTsXndbcrdLWOM+ajbSQIY3gmLFzhjeXHGksGcp1NZ08pJjLZyTCxfz1C7v/ltJqycA==}
     dependencies:
       roughjs: 4.6.6
+    dev: false
+
+  /@slidev/theme-apple-basic@0.25.1:
+    resolution: {integrity: sha512-saA5yYui+jTT13tP+QJKnWeM8sK0IA1iln2E3sWAJsfKdQHUD3fw8+AlUHLUH6yc8NPq3ewtZcwWx49a/iF8Tg==}
+    engines: {node: '>=14.0.0', slidev: '>=v0.47.0'}
+    dependencies:
+      '@slidev/types': 0.47.5
+      codemirror-theme-vars: 0.1.2
+      prism-theme-vars: 0.2.5
     dev: false
 
   /@slidev/theme-default@0.25.0:

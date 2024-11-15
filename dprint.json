@@ -10,9 +10,7 @@
   "excludes": [
     "**/node_modules",
     "**/*-lock.json",
-    "website/pokemon",
-    "website/graffle",
-    "website/.vitepress/dist"
+    "slides"
   ],
   "plugins": [
     "https://plugins.dprint.dev/typescript-0.93.0.wasm",

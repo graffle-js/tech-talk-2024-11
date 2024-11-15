@@ -1,18 +1,23 @@
 ---
-theme: seriph
-title: Building a Modular Type Safe GraphQL Client
-layout: default
-fonts:
-  sans: 'Inter'
+theme: apple-basic
 transition: slide-up
 mdc: true
 overviewSnapshots: true
+fonts:
+  sans: 'Inter'
+layout: intro-image-right
+image: /assets/logo.svg
+title: Welcome
+hideInToc: true
 ---
 
-<div class="flex h-full justify-center flex-col items-center gap-2">
-  <img src="./assets/logo-light.svg" class="w-50" />
-  <span class="text-4xl font-bold tracking-wider text-center leading-10">Building a Modular <br/>Type Safe GraphQL Client</span>
-</div>
+
+# GRAFFLE
+
+
+## A Modular Type Safe GraphQL Client for JavaScript.
+
+### Exploring Advanced Type Level techniques
 
 <!--
 - Hey everyone
@@ -20,38 +25,36 @@ overviewSnapshots: true
 - Thanks to the Meetup organizers for having me as a speaker and to all of you for showing up today
 -->
 
-
-
 ---
-title: Hey
+layout: statement
+title: Hello
+hideInToc: true
 ---
 
-<div class="flex justify-center flex-col items-center">
-  <img src="./assets/jason.png" class="w-50 rounded-full" />
-  <p class="text-2xl">Jason Kuhrt</p>
-  <p class="text-xl">Hey 👋</p>
-  <p class="text-xl">🇨🇦</p>
-</div>
+<img src="./assets/jason.png" class="w-50 rounded-full inline-block"  />
+<p>Jason Kuhrt</p>
+<p>🇨🇦 🏔️</p>
 
 <!--
 - First off a bit about me
 - My name is Jason, I'm a Montreal-based developer with over 10 years experience
 - I studied in design but through open-source gateway drugs like Wordpress, jQuery, Node, GitHub, etc. I found my way into this world of systems building
 - I've worked on web apps, cloud services, automation, devops, architecture, libraries, etc.
-- Some places I've worked at include Prisma, Dialogue, littleBits and in a few weeks I'm joining The Guild. 
+- Some places I've worked at include Prisma, Dialogue, littleBits and in a few weeks I'm joining The Guild.
 - I also work as an open source maintainer on various libraries
 - And for the past five years especially I've worked extensively with TypeScript
 - Since leaving Prisma this year I've focused my work on a new GraphQL client library called Graffle which is the basis for this talk today.
 -->
 
 ---
-title: What we're going to cover
+hideInToc: true
 ---
 
-# What we're going to cover
+# Plan
 
-- An overview and demo of Graffle.
-- How some of Graffle's features are achieved.
+45 minutes
+
+<toc></toc>
 
 <!--
 - Ok, so let's get started
@@ -64,6 +67,7 @@ title: What we're going to cover
 title: What is GraphQL?
 ---
 
+# What is GraphQL?
 
 <style>
   .slidev-layout {
@@ -128,34 +132,34 @@ type ActionMessage implements ActionBase {
 Request
 
 ```graphql
-  user(id: "abc123") {
-    name
-    messagesSince1WeekAgo: actions(
-      from: "now-1w",
-      actionType: message
-    ) {
-      __typename
-      createdAt
-      ... on ActionMessage {
-        to {
-          id
-        }
-        content
+user(id: "abc123") {
+  name
+  messagesSince1WeekAgo: actions(
+    from: "now-1w",
+    actionType: message
+  ) {
+    __typename
+    createdAt
+    ... on ActionMessage {
+      to {
+        id
       }
+      content
     }
-    likesSince2MonthsAgo: actions(
-      from: "now-24h",
-      actionType: like
-    ) {
-      __typename
-      createdAt
-      ... on ActionLike {
-        user {
-          id
-        }
+  }
+  likesSince2MonthsAgo: actions(
+    from: "now-24h",
+    actionType: like
+  ) {
+    __typename
+    createdAt
+    ... on ActionLike {
+      user {
+        id
       }
     }
   }
+}
 ```
 
 </div>
@@ -190,7 +194,6 @@ Data
     }
   }
 }
-
 ```
 
 </div>
@@ -201,8 +204,6 @@ Data
 -->
 
 ---
-title: What is Graffle?
----
 
 # What is Graffle?
 
@@ -212,80 +213,74 @@ title: What is Graffle?
 - That has multiple transports (http, memory)
 - That has multiple interfaces (GraphQL, TypeScript)
 
----
-title: Graffle Demo
----
-
-# Graffle Demo
+<img src="./assets/website.png" class="absolute right--90 top--25 scale-70"  />
 
 
 ---
-title: Vanilla GraphQL
+layout: statement
 ---
 
-<!--
-1. Send requests using GraphQL syntax.
--->
-
+# Demo Time
 
 ---
-title: Document Builder
+layout: statement
 ---
 
-<!--
-1. Use CLI to generate types from a schema.
--->
+# TS Technique 1: Addressable Global Type Augmentation
 
 ---
-title: "Document Builder: Methods"
+layout: statement
 ---
 
+# TS Technique 2: Builder Pattern
 
 ---
-title: "Document Builder: Aliases"
+layout: statement
 ---
 
----
-title: "Document Builder: Arguments"
----
+# TS Technique 3: Type-Level Functions
 
 ---
-title: "Document Builder: Directives"
+layout: statement
 ---
 
----
-title: "Document Builder: Enums"
----
+# TS Technique 4: Generated Types
 
 ---
-title: "Document Builder: Inline Fragments"
+layout: statement
 ---
 
----
-title: Custom Scalars
----
-
----
-title: Extensions
----
-
----
-title: "Extensions: Custom Method"
----
-
----
-title: "Extensions: Custom Chaining Method"
----
-
----
-title: "Extensions: Anyware"
----
-
----
-title: "What's Next for Graffle"
----
+# TS Technique 5: Type Testing
 
 
 ---
-title: "Thanks!"
+
+# What's Next for Graffle
+
+### Financial Support
+
+- Handful of one-time donations (Open Collective)
+- Sponsorship by The Guild
+
+### Roadmap
+
+- Modular Transports (in progress)
+- GraphQL OneOf Support
+- Defer & Stream Support
+- Documentation (Website, JSDoc)
+- Factor out Anyware library
+- ...
+- Q1 2025: First stable release!
+
+
+_And hopefully your feedback on GitHub issues!_ 😊
+
 ---
+layout: statement
+---
+
+# Thanks!
+
+### https://graffle.js.org
+
+### https://bsky.app/profile/kuhrt.me
