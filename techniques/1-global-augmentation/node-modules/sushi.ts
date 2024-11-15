@@ -1,5 +1,5 @@
 import { IsNever, UnionToTuple } from 'type-fest'
-import { _ } from '../../prelude.js'
+import { _ } from '../../lib/prelude.js'
 
 type Sushi<$Extension extends Extension> = $Extension['mixin'] & {
   property1: string

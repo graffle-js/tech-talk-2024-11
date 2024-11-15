@@ -238,13 +238,13 @@ layout: statement
 layout: statement
 ---
 
-# TS Technique 2: Recursive Builder
+# TS Technique 2: Type-Level Functions
 
 ---
 layout: statement
 ---
 
-# TS Technique 3: Type-Level Functions
+# TS Technique 3: Recursive Builder
 
 ---
 layout: statement
