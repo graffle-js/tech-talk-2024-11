@@ -232,7 +232,7 @@ layout: statement
 layout: statement
 ---
 
-# TS Technique 2: Builder Pattern
+# TS Technique 2: Recursive Builder
 
 ---
 layout: statement
