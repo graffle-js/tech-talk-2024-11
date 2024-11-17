@@ -31,3 +31,25 @@ html.dark #slideshow {
 h1 {
 	line-height: 1.5!important;
 }
+
+.emoji-link {
+	border-bottom: none!important;
+	font-size: 3rem;
+}
+
+.emoji-link:hover {
+	filter: hue-rotate(280deg);
+}
+
+@keyframes hue-rotate {
+  from {
+    filter: sepia(0.35) hue-rotate(0deg);
+  }
+  to {
+    filter: sepia(0.35) hue-rotate(360deg);
+  }
+}
+
+.animate {
+  animation: hue-rotate 30s linear infinite;
+}

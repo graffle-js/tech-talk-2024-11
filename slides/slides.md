@@ -4,10 +4,10 @@ transition: slide-up
 mdc: true
 overviewSnapshots: true
 fonts:
-  sans: 'Inter'
+  sans: Inter
 layout: intro-image-right
 image: /assets/logo.svg
-title: Welcome
+title: Exploring Advanced Type Level Techniques
 hideInToc: true
 ---
 
@@ -17,7 +17,19 @@ hideInToc: true
 
 ## A Modular Type Safe GraphQL Client for JavaScript.
 
-### Exploring Advanced Type Level techniques
+### Exploring Advanced Type Level Techniques
+
+<span style="font-size: 0.6rem;color:hsla(45, 50%, 80%, 1);">
+  Animal Emojis Edition
+  <div class="ml-1 inline-flex flex-row gap-2">
+    <fxemoji-goat />
+    <fxemoji-wolfface />
+    <fxemoji-octopus />
+    <fxemoji-dragonside />
+    <fxemoji-honeybee />
+    <fxemoji-spurtingwhale />
+  </div>
+</span>
 
 <!--
 - Hey everyone
@@ -31,15 +43,49 @@ title: Hello
 hideInToc: true
 ---
 
-<img src="./assets/jason.png" class="w-50 rounded-full inline-block"  />
+<style>
+.local pre.shiki {
+  padding: 2rem!important;
+  min-width: 400px;
+}
+.local pre.shiki * {
+  font-size: 0.8rem!important;
+}
+</style>
 
-`Me = Jason Kuhrt`
+<div class="local flex flex-row items-center gap-10">
+<div>
+  <img src="./assets/jason.png" class="w-70 rounded-full inline-block"  />
+</div>
+<div class="text-left" style="font-size:1rem!important;">
 
-`Based = Montreal`
+```ts
+interface Me {
+  name: 'Jason Kuhrt'
+  based: 'Montreal'
+  ex: [
+    'Prisma',
+    'Dialogue',
+    'littleBits',
+    ...unknown[]
+  ]
+  creator: [
+    'Paka',
+    'Graffle',
+    'Molt',
+    'Dripip',
+    'Nexus',
+    'React Popover',
+    ...unknown[]
+  ]
+  nerd: true
+  website: 'https://kuhrt.me'
+}
 
-`Ex = Prisma | Dialogue | littleBits | ...`
+```
 
-`Creator = Paka | Graffle | Molt | Dripip | Nexus | ...`
+</div>
+</div>
 
 <!--
 - First off a bit about me
@@ -55,6 +101,12 @@ hideInToc: true
 ---
 hideInToc: true
 ---
+
+<style>
+.slidev-toc a {
+  border-bottom: none!important;
+}
+</style>
 
 # Plan
 
@@ -219,7 +271,7 @@ Data
 - That has multiple transports (http, memory)
 - That has multiple interfaces (GraphQL, TypeScript)
 
-<img src="./assets/website.png" class="absolute right--90 top--25 scale-70"  />
+<img src="./assets/website.png" class="absolute right--90 top--25 scale-70" style="filter: grayscale(0.5)" />
 
 
 ---
@@ -228,11 +280,19 @@ layout: statement
 
 # Demo Time
 
+<br>
+
+<a class="emoji-link" href="cursor://file//Users/jasonkuhrt/projects/graffle/tech-talk-2024-11/demos/1-gql.ts"><fxemoji-goat /></a>
+
 ---
 layout: statement
 ---
 
 # TS Technique 1: Addressable Global Type Augmentation
+
+<br>
+
+<a class="emoji-link" href="cursor://file//Users/jasonkuhrt/projects/graffle/tech-talk-2024-11/techniques/1-global-augmentation/main.ts"><fxemoji-wolfface /></a>
 
 ---
 layout: statement
@@ -240,11 +300,19 @@ layout: statement
 
 # TS Technique 2: Type-Level Functions
 
+<br>
+
+<a class="emoji-link" href="cursor://file//Users/jasonkuhrt/projects/graffle/tech-talk-2024-11/techniques/2-type-level-functions/main.ts"><fxemoji-octopus /></a>
+
 ---
 layout: statement
 ---
 
 # TS Technique 3: Recursive Builder
+
+<br>
+
+<a class="emoji-link" href="cursor://file//Users/jasonkuhrt/projects/graffle/tech-talk-2024-11/techniques/3-recursive-builder/main.ts"><fxemoji-dragonside /></a>
 
 ---
 layout: statement
@@ -252,33 +320,28 @@ layout: statement
 
 # TS Technique 4: Type Testing
 
+<br>
 
----
-layout: statement
----
-
-# TS Technique 5: Generated Types
+<a class="emoji-link" href="cursor://file//Users/jasonkuhrt/projects/graffle/tech-talk-2024-11/techniques/4-type-testing/examples.md"><fxemoji-honeybee /></a>
 
 ---
 
-# Where To Learn Advanced TypeScript?
-
-### Paid
-
-- [Total TypeScript course](https://www.totaltypescript.com) (paid, get your company to cover it?)
-- TypeScript books? (Ones I am aware of are focused on application level, not helpful for this)
-
-### Free
+# How To Master Advanced TypeScript?
 
 - Write your own **libraries**, practice practice practice.
-- ... Write more of your own **libraries**, practice practice practice.
-- When you get stuck, ask questions on Stack Overflow, hardest ones always answered by [jcalz](https://stackoverflow.com/users/2887218/jcalz)
-  - (use [TypeScript Bug Workbench](https://www.typescriptlang.org/dev/bug-workbench/) to share scenarios)
-- When you get stuck (2), ask questions on [TypeScript Discord](https://discord.com/invite/typescript).
-- A few excellent articles by Andrea Simone Costa https://andreasimonecosta.dev/posts/
-- Read TypeScript code of libraries you use e.g. [Zod](https://github.com/colinhacks/zod), [ArkType](https://github.com/arktypeio/arktype), [Graffle](https://github.com/graffle-js/graffle), [Effect](https://github.com/Effect-TS/effect), etc.
+- ... Write more of your own **libraries**, practice practice practice!
+- Ask questions on ... <sup>1</sup> 
+  - Stack Overflow, hardest ones _always_ answered by [jcalz](https://stackoverflow.com/users/2887218/jcalz)! 
+  - [TypeScript Discord](https://discord.com/invite/typescript).
+- Scattered Ad-hoc Articles
+  - Andrea Simone Costa https://andreasimonecosta.dev/posts/
+  - Sandro Maglione https://sandromaglione.com
+- Read source code (especially of libraries you use) e.g. [TypeFest](https://github.com/sindresorhus/type-fest), [Zod](https://github.com/colinhacks/zod), [ArkType](https://github.com/arktypeio/arktype), [Graffle](https://github.com/graffle-js/graffle), [Effect](https://github.com/Effect-TS/effect), ...
+- (paid) Some of the [Total TypeScript course](https://www.totaltypescript.com)
 
-_Also maybe in the future_: I would like to start writing my own articles at https://kuhrt.me/writing
+--
+
+<sup>1</sup> Share scenarios with [TypeScript Bug Workbench](https://www.typescriptlang.org/dev/bug-workbench/)
 
 ---
 
@@ -300,16 +363,17 @@ _Also maybe in the future_: I would like to start writing my own articles at htt
 - Q1 2025: First stable release!
 
 
-_And hopefully your feedback on GitHub issues!_ 😊
+_And hopefully your feedback on GitHub issues!_ <fxemoji-smallsmile />
 
 ---
 layout: statement
 ---
 
-# Thanks!
+# Thanks! <fxemoji-spurtingwhale class="animate" />
 
-### This Talk: https://github.com/graffle-js/tech-talk-2024-11
 
-### Graffle: https://graffle.js.org
+https://github.com/graffle-js/tech-talk-2024-11
 
-### Me: https://bsky.app/profile/kuhrt.me
+https://graffle.js.org
+
+https://bsky.app/profile/kuhrt.me

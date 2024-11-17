@@ -1,9 +1,9 @@
 declare global {
   namespace _SushiGlobal {
     interface Registry {
-      extension1: {
+      salmon: {
         mixin: {
-          extension1Method: () => void
+          salmon: () => void
         }
       }
     }

@@ -1,0 +1,21 @@
+{
+  "folders": [
+    {
+      "name": "demos",
+      "path": "demos"
+    },
+    {
+      "name": "techniques",
+      "path": "techniques"
+    },
+    {
+      "name": "tech-talk-2024-11",
+      "path": "."
+    },
+    {
+      "name": "graffle",
+      "path": "../../jasonkuhrt/graffle"
+    }
+  ],
+  "settings": {}
+}

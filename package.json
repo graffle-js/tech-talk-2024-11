@@ -5,6 +5,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start:slides": "slidev",
     "start:pokemon": "tsx demos/assets/pokemon-schema/run-server.ts",
     "gen:sdl": "tsx demos/assets/pokemon-schema/run-generate-sdl.ts",
     "gen:graffle": "graffle --schema ./demos/assets/pokemon-schema/schema.graphql --output ./demos/assets/graffle"

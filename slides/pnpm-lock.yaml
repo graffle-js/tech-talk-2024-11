@@ -1,6 +1,9 @@
 lockfileVersion: '6.0'
 
 dependencies:
+  '@iconify-json/fxemoji':
+    specifier: ^1.2.0
+    version: 1.2.0
   '@slidev/cli':
     specifier: ^0.50.0-beta.6
     version: 0.50.0-beta.6(@types/markdown-it@14.1.2)(postcss@8.4.49)
@@ -792,6 +795,12 @@ packages:
 
   /@iconify-json/carbon@1.2.4:
     resolution: {integrity: sha512-DhW2jjMVGwV0DLHc0cmDYohdtGxMra8UuwgjHrryPy+rQX4gXhJwCBBVP2h2UG/92AoRCTn7zUJve4WvY5MLYg==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: false
+
+  /@iconify-json/fxemoji@1.2.0:
+    resolution: {integrity: sha512-MTi31I4DMWH5zT+/CH/dxf+Gd4EXnyILZjT8T22J0kQSPXNUi2No6pc56H/X/TsXqzt8tPOyaI7a1yITPwsH8g==}
     dependencies:
       '@iconify/types': 2.0.0
     dev: false

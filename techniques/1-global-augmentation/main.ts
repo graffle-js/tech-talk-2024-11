@@ -16,17 +16,17 @@ import { Sushi } from './node-modules/sushi.js'
  * Graffle applies both techniques (1) and (2).
  */
 
-const sushi1 = Sushi.create('extension1')
+const sushi1 = Sushi.create('tuna')
 
 sushi1.property1
 sushi1.property2
-sushi1.extension1Method() // Only available because `extension1` was used.
+sushi1.tuna() // Only available because `tuna` was used.
 
-const sushi2 = Sushi.create('extension2')
+const sushi2 = Sushi.create('salmon')
 
 sushi2.property1
 sushi2.property2
-sushi2.extension2Method() // Only available because `extension2` was used.
+sushi2.salmon() // Only available because `salmon` was used.
 
 /**
  * @remarks In the following we can see that
