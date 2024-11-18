@@ -58,13 +58,13 @@ const Trainer = builder.objectRef<DatabaseServer.Trainer>(`Trainer`).implement({
 const Pokemon = builder.objectRef<DatabaseServer.Pokemon>(`Pokemon`).implement({
   interfaces: [Being],
   fields: (t) => ({
-    id: t.id({ resolve: (pokemon) => pokemon.id }),
-    type: t.field({ type: PokemonType, resolve: (pokemon) => pokemon.type }),
-    name: t.string({ resolve: (pokemon) => pokemon.name }),
-    hp: t.int({ resolve: (pokemon) => pokemon.hp }),
-    attack: t.int({ resolve: (pokemon) => pokemon.attack }),
-    defense: t.int({ resolve: (pokemon) => pokemon.defense }),
-    birthday: t.field({ type: `Date`, resolve: (pokemon) => pokemon.birthday }),
+    id: t.id({ resolve: (pokemon) => pokemon.id, nullable: false }),
+    type: t.field({ type: PokemonType, resolve: (pokemon) => pokemon.type, nullable: false }),
+    name: t.string({ resolve: (pokemon) => pokemon.name, nullable: false }),
+    hp: t.int({ resolve: (pokemon) => pokemon.hp, nullable: false }),
+    attack: t.int({ resolve: (pokemon) => pokemon.attack, nullable: false }),
+    defense: t.int({ resolve: (pokemon) => pokemon.defense, nullable: false }),
+    birthday: t.field({ type: `Date`, resolve: (pokemon) => pokemon.birthday, nullable: false }),
     trainer: t.field({
       type: Trainer,
       nullable: true,
@@ -229,6 +229,7 @@ const DateFilter = builder.inputType(`DateFilter`, {
 const PokemonFilter = builder.inputType(`PokemonFilter`, {
   fields: (t) => ({
     name: t.field({ type: StringFilter }),
+    type: t.field({ type: PokemonType }),
     birthday: t.field({ type: DateFilter }),
   }),
 })
@@ -247,6 +248,9 @@ builder.queryField(`pokemons`, (t) =>
     type: [Pokemon],
     resolve: (_, args, ctx) => {
       return DatabaseServer.tenant(ctx?.tenant).pokemon.filter((p) => {
+        if (args.filter?.type) {
+          return p.type === args.filter.type
+        }
         if (args.filter?.name) {
           if (args.filter.name.contains) {
             return p.name.includes(args.filter.name.contains)

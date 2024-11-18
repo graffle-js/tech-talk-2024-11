@@ -3,12 +3,14 @@
   "version": "1.0.0",
   "type": "module",
   "description": "",
+  "packageManager": "pnpm@9.13.2",
   "main": "index.js",
   "scripts": {
+    "demo:1": "tsx demos/1-gql",
     "start:slides": "slidev",
     "start:pokemon": "tsx demos/assets/pokemon-schema/run-server.ts",
     "gen:sdl": "tsx demos/assets/pokemon-schema/run-generate-sdl.ts",
-    "gen:graffle": "graffle --schema ./demos/assets/pokemon-schema/schema.graphql --output ./demos/assets/graffle"
+    "gen:graffle": "pnpm gen:sdl && graffle --schema ./demos/assets/pokemon-schema/schema.graphql --output ./demos/assets/graffle"
   },
   "keywords": [],
   "author": "",
@@ -25,7 +27,7 @@
     "async-cleanup": "^1.0.0",
     "dprint": "^0.47.5",
     "get-port": "^7.1.0",
-    "graffle": "8.0.0-next.116",
+    "graffle": "8.0.0-next.123",
     "graphql": "^16.9.0",
     "graphql-scalars": "^1.23.0",
     "graphql-yoga": "^5.10.2",

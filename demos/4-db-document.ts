@@ -27,6 +27,10 @@ const data = await graffle
       },
     },
   })
+  /**
+   * Typesafe operation selection.
+   * Change selection to change return type.
+   */
   .run('getTrainers')
 
 console.log(data)

@@ -66,19 +66,20 @@ type Patron implements Being {
 }
 
 type Pokemon implements Being {
-  attack: Int
-  birthday: Date
-  defense: Int
-  hp: Int
-  id: ID
-  name: String
+  attack: Int!
+  birthday: Date!
+  defense: Int!
+  hp: Int!
+  id: ID!
+  name: String!
   trainer: Trainer
-  type: PokemonType
+  type: PokemonType!
 }
 
 input PokemonFilter {
   birthday: DateFilter
   name: StringFilter
+  type: PokemonType
 }
 
 enum PokemonType {
