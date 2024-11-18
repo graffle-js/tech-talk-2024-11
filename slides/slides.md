@@ -129,6 +129,7 @@ title: What is GraphQL?
 
 <style>
   .slidev-layout {
+    height: 100%;
     display: flex;
     flex-direction: column;
   }

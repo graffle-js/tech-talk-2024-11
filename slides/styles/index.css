@@ -7,6 +7,8 @@
 	--slidev-code-line-height: 0;
 }
 
+
+
 .slidev-code {
 	--slidev-code-background: #1b1b1f;
 }
@@ -52,4 +54,8 @@ h1 {
 
 .animate {
   animation: hue-rotate 30s linear infinite;
+}
+
+a {
+	border-bottom-color: hsla(0, 0%, 100%, 0.3)!important;
 }
