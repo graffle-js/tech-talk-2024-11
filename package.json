@@ -7,7 +7,9 @@
   "main": "index.js",
   "scripts": {
     "demo:1": "tsx demos/1-gql",
-    "start:slides": "slidev",
+    "demo:2": "tsx demos/2-memory",
+    "demo:3": "tsx demos/3-db-root-field",
+    "start:slides": "slidev ./slides/slides.md --open",
     "start:pokemon": "tsx demos/assets/pokemon-schema/run-server.ts",
     "gen:sdl": "tsx demos/assets/pokemon-schema/run-generate-sdl.ts",
     "gen:graffle": "pnpm gen:sdl && graffle --schema ./demos/assets/pokemon-schema/schema.graphql --output ./demos/assets/graffle"
@@ -16,6 +18,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@iconify-json/fxemoji": "^1.2.0",
+    "@slidev/cli": "^0.50.0-beta.6",
+    "@slidev/theme-apple-basic": "^0.25.1",
+    "@slidev/theme-default": "latest",
+    "@slidev/theme-seriph": "latest",
+    "graffle": "8.0.0-next.116",
+    "tsx": "^4.19.2",
+    "vue": "^3.5.12",
     "@dprint/formatter": "^0.4.1",
     "@dprint/typescript": "^0.93.2",
     "@pothos/core": "^4.3.0",
