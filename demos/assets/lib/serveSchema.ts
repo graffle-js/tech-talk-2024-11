@@ -1,8 +1,10 @@
 import { addCleanupListener } from 'async-cleanup'
-import getPort from 'get-port'
 import type { GraphQLSchema } from 'graphql'
 import { createYoga } from 'graphql-yoga'
 import { createServer } from 'node:http'
+
+const port = 3000
+export const url = new URL(`http://localhost:${String(port)}/graphql`)
 
 export const serveSchema = async (input: { schema: GraphQLSchema; log?: boolean }) => {
   const { schema } = input
@@ -18,8 +20,6 @@ export const serveSchema = async (input: { schema: GraphQLSchema; log?: boolean 
     maskedErrors: false,
   })
   const server = createServer(yoga as any)
-  const port = await getPort({ port: [3000, 3001, 3002, 3003, 3004] })
-  const url = new URL(`http://localhost:${String(port)}/graphql`)
   let runState = true
   server.listen(port)
   await new Promise((resolve) =>

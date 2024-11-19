@@ -1,4 +1,4 @@
-import { Graffle } from './assets/graffle/__.js'
+import { Graffle } from 'graffle'
 import { schema } from './assets/pokemon-schema/schema.js'
 
 //
@@ -28,9 +28,17 @@ import { schema } from './assets/pokemon-schema/schema.js'
 //
 //
 
+import { schemaMap } from './assets/graffle/_.js'
+
 {
+  // @ts-expect-error Missing schemaMap
+  Graffle.create({ schema }).scalar()
+
   const graffle = Graffle
-    .create({ schema })
+    .create({
+      schema,
+      schemaMap,
+    })
     .scalar('Date', {
       decode: (value) => new Date(value),
       encode: (value) => value.toISOString(),
