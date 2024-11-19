@@ -12,7 +12,7 @@
     "demo:4": "tsx demos/4-db-batch",
     "demo:5": "tsx demos/5-db-document",
     "demo:6": "tsx demos/6-custom-scalars",
-    "demo:7": "tsx demos/7-ex-anyware",
+    "demo:7": "tsx demos/7-anyware",
     "demo:8": "tsx demos/8-ex-method",
     "demo:9": "tsx demos/9-ex-chaining-method",
     "start:slides": "slidev ./slides/slides.md --open",
