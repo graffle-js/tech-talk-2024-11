@@ -35,8 +35,8 @@ dependencies:
     specifier: ^7.1.0
     version: 7.1.0
   graffle:
-    specifier: 8.0.0-next.123
-    version: 8.0.0-next.123(@dprint/formatter@0.4.1)(@dprint/typescript@0.93.2)(graphql@16.9.0)
+    specifier: 8.0.0-next.126
+    version: 8.0.0-next.126(@dprint/formatter@0.4.1)(@dprint/typescript@0.93.2)(graphql@16.9.0)
   graphql:
     specifier: ^16.9.0
     version: 16.9.0
@@ -674,8 +674,8 @@ packages:
       resolve-pkg-maps: 1.0.0
     dev: false
 
-  /graffle@8.0.0-next.123(@dprint/formatter@0.4.1)(@dprint/typescript@0.93.2)(graphql@16.9.0):
-    resolution: {integrity: sha512-cZkBz1NWZvyLKK/xWPefuqssfSR9+xYCNsrA+mOv6db0GFijZbZM0tUnRBzccoe2UikBiD/U48VZXoffaFzYhw==}
+  /graffle@8.0.0-next.126(@dprint/formatter@0.4.1)(@dprint/typescript@0.93.2)(graphql@16.9.0):
+    resolution: {integrity: sha512-vLVJcVKbwkowdUR3/eJmBT5vM6Yfj11/iUhYuHI/LSajc+qkZOKsPzqHVG2FephCxDyipQLEhoRRmmP7IVwVKg==}
     hasBin: true
     peerDependencies:
       '@dprint/formatter': ^0.4.0

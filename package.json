@@ -27,7 +27,7 @@
     "async-cleanup": "^1.0.0",
     "dprint": "^0.47.5",
     "get-port": "^7.1.0",
-    "graffle": "8.0.0-next.123",
+    "graffle": "8.0.0-next.126",
     "graphql": "^16.9.0",
     "graphql-scalars": "^1.23.0",
     "graphql-yoga": "^5.10.2",
