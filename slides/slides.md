@@ -277,6 +277,21 @@ Data
 
 
 ---
+layout: image
+title: Components Overview
+# image: /assets/components.png
+---
+
+<style>
+#slide-container:has(.slidev-page-6:not([style*="display: none"])) {
+  background: black!important;
+}
+</style>
+
+<img src="./assets/components.png" class="absolute top-0 left-0" style="filter: invert(1); opacity: 1" />
+
+
+---
 layout: statement
 ---
 
@@ -428,8 +443,8 @@ layout: statement
 # Ways You Might Improve Your TypeScript Skills
 
 - Write library code
-- Ask questions on ... <sup>1</sup> 
-  - Stack Overflow, often answered by [jcalz](https://stackoverflow.com/users/2887218/jcalz)! 
+- Ask questions on ... (leverage [TypeScript Bug Workbench](https://www.typescriptlang.org/dev/bug-workbench/))
+  - Stack Overflow, often answered by [jcalz](https://stackoverflow.com/users/2887218/jcalz) 
   - [TypeScript Discord](https://discord.com/invite/typescript).
   - [ArkType Discord](https://discord.com/invite/xEzdc3fJQC) ([David Blass](https://github.com/ssalbdivad)).
   - [Effect Discord](https://discord.com/invite/effect-ts).
@@ -437,8 +452,6 @@ layout: statement
   - Andrea Simone Costa https://andreasimonecosta.dev/posts/
   - Sandro Maglione https://sandromaglione.com
 - Read source code of libraries you use e.g. [TypeFest](https://github.com/sindresorhus/type-fest), [Zod](https://github.com/colinhacks/zod), [ArkType](https://github.com/arktypeio/arktype), [Graffle](https://github.com/graffle-js/graffle), [Effect](https://github.com/Effect-TS/effect), ...
-
-<sup>1</sup> Share scenarios with [TypeScript Bug Workbench](https://www.typescriptlang.org/dev/bug-workbench/)
 
 
 
