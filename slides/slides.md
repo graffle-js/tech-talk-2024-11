@@ -268,9 +268,10 @@ Data
 
 - A TypeScript library
 - For sending GraphQL requests
-- That runs in browsers, Node, Deno, Bun
+- That (should) runs in browsers, Node, Deno, Bun
 - That has multiple transports (http, memory)
 - That has multiple interfaces (GraphQL, TypeScript)
+- That is modular
 
 <img src="./assets/website.png" class="absolute right--90 top--25 scale-70" style="filter: grayscale(0.5)" />
 
@@ -344,25 +345,25 @@ layout: statement
 
 ---
 
-# What's Next for Graffle
+# What's Next for Graffle?
 
 ### Financial Support
 
 - Handful of one-time donations (Open Collective)
 - Sponsorship by The Guild
 
-### Roadmap
+### Features ...
 
-- Modular Transports (in progress)
-- GraphQL OneOf Support
-- Defer & Stream Support
-- Documentation (Website, JSDoc)
-- Factor out Anyware library
-- ...
-- Q1 2025: First stable release!
+- feat(extension-system): Extensible transports
+- improve(perf): Reduce bundle size (e.g. web preset, http transport, no memory)
+- improve(types): Simplify _appearance of_ public interface types
+- feat(graphql-support): OneOf, Defer & Stream directives, subscriptions
+- feat(extension-system): Extensible directives
+- feat(extension/*): More: Effect, Cache, BatchRequest ...
+- chore(docs): More Documentation (Website, JSDoc)
+- refactor: Extract `anyware` package
+- Automated API Clients: `@graffle/client- ... github | shopify | cloudflare-queues | yelp`
 
-
-_And hopefully your feedback on GitHub issues!_ <fxemoji-smallsmile />
 
 ---
 layout: statement
