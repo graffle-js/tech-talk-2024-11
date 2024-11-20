@@ -287,6 +287,103 @@ layout: statement
 <a class="emoji-link" href="cursor://file//Users/jasonkuhrt/projects/graffle/tech-talk-2024-11/demos/1-gql.ts"><fxemoji-goat /></a>
 
 ---
+layout: two-cols-header
+---
+
+# Is it <strike>done</strike> production ready?
+
+- No (but maybe good enough for you?)
+- Continuous pre-releases: `pnpm add graffle@next`
+- 500+ tests: unit (type & value level) + E2E
+- Bug fixes prioritized (closed in single digit days)
+
+::left::
+
+## Stable (ish)
+
+- Raw interface
+- Document builder interface
+- Request pipeline
+- Custom Scalars
+
+
+::right::
+
+## Unstable (ish)
+
+- Extension System
+- Extensions
+- Output configuration
+- CLI
+
+
+---
+
+<style>
+.local .slidev-code {
+  font-size: 1.8rem;
+}
+</style>
+<div class="local">
+
+# What's Next?
+
+### Sustainability
+
+- Handful of one-time donations (Open Collective)
+- Sponsorship by The Guild
+- Decreased hours starting December: 15-20 hours/wk
+
+### Features Etc.
+
+```
+Currently:
+* feat(extension-system) : Extensible transports
+* improve(perf)          : Reduce bundle size (e.g. web preset, http transport, no memory)
+
+Soon:
+* chore(docs)            : Better documentation (Website, JSDoc)
+* refactor               : Extract anyware package
+* feat(request)          : OneOf, @defer, @stream, subscription
+* improve(types)         : Simplify _appearance of_ public interface types
+* feat(extension/*)      : More: Effect, Cache, BatchRequest ...
+* feat                   : Automated Clients: @graffle/client-github | shopify | cloudflare-queues | yelp
+* feat(extension-system) : Extensible directives
+```
+
+</div>
+---
+layout: statement
+---
+
+# Can I help?
+
+## Yes!
+
+Bug reports
+
+Experience reports
+
+Feature requests
+
+Pull requests
+
+---
+layout: statement
+---
+
+# TS Techniques
+
+<div class="inline-flex flex-row gap-4">
+<fxemoji-goat />
+<fxemoji-wolfface />
+<fxemoji-octopus />
+<fxemoji-dragonside />
+<fxemoji-honeybee />
+<fxemoji-spurtingwhale />
+</div>
+
+---
 layout: statement
 ---
 
@@ -343,26 +440,6 @@ layout: statement
 
 <sup>1</sup> Share scenarios with [TypeScript Bug Workbench](https://www.typescriptlang.org/dev/bug-workbench/)
 
----
-
-# What's Next for Graffle?
-
-### Financial Support
-
-- Handful of one-time donations (Open Collective)
-- Sponsorship by The Guild
-
-### Features ...
-
-- feat(extension-system): Extensible transports
-- improve(perf): Reduce bundle size (e.g. web preset, http transport, no memory)
-- improve(types): Simplify _appearance of_ public interface types
-- feat(graphql-support): OneOf, Defer & Stream directives, subscriptions
-- feat(extension-system): Extensible directives
-- feat(extension/*): More: Effect, Cache, BatchRequest ...
-- chore(docs): More Documentation (Website, JSDoc)
-- refactor: Extract `anyware` package
-- Automated API Clients: `@graffle/client- ... github | shopify | cloudflare-queues | yelp`
 
 
 ---

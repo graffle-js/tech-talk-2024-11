@@ -36,15 +36,15 @@ interface BuilderExtension extends Builder.Extension {
   return: BuilderExtension_<this['params']>
 }
 
-interface BuilderExtension_<$Args extends Builder.Extension.Parameters<BuilderExtension>> {
+interface BuilderExtension_<$Arguments extends Builder.Extension.Parameters<BuilderExtension>> {
   /**
    * Hello
    */
-  hello: () => Builder.Definition.MaterializeWithNewContext<$Args['chain'], $Args['context']> // todo make chain already have this extension applied
+  hello: () => Builder.Definition.MaterializeWith<$Arguments['definition'], $Arguments['context']>
   /**
    * World
    */
-  world: () => Builder.Definition.MaterializeWithNewContext<$Args['chain'], $Args['context']>
+  world: () => Builder.Definition.MaterializeWith<$Arguments['definition'], $Arguments['context']>
 }
 
 //
@@ -58,9 +58,11 @@ interface BuilderExtension_<$Args extends Builder.Extension.Parameters<BuilderEx
 import { Graffle } from 'graffle'
 import { schema } from './assets/pokemon-schema/schema.js'
 
+const debug = process.env['HW_DEBUG'] === 'true'
+
 const graffle = Graffle
   .create({ schema })
-  .use(HelloWorld({ debug: process.env['HW_DEBUG'] === 'true' }))
+  .use(HelloWorld({ debug }))
 
 const pokemons = await graffle.hello().world().query.pokemons({ name: true })
 
