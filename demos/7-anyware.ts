@@ -4,9 +4,7 @@ import { url } from './assets/lib/serveSchema.js'
 const graffle = Graffle
   .create({ schema: url })
   //
-  //
   // -----------------------
-  //
   //
   .anyware(async ({ encode }) => {
     const { pack } = await encode()
@@ -24,9 +22,7 @@ const graffle = Graffle
     return result
   })
   //
-  //
   // -----------------------
-  //
   //
   .anyware(async ({ encode }) => {
     console.log('A: Hello! I read from the pack input.')
@@ -35,9 +31,7 @@ const graffle = Graffle
     return pack()
   })
   //
-  //
   // -----------------------
-  //
   //
   .anyware(async ({ unpack }) => {
     console.log('B: Hello! I sniff some of the decode input.')
@@ -47,9 +41,7 @@ const graffle = Graffle
     return await unpack()
   })
   //
-  //
   // -----------------------
-  //
   //
   .anyware(async ({ decode }) => {
     console.log('C: Hello! I sniff the result.')
@@ -58,9 +50,7 @@ const graffle = Graffle
     return result
   })
   //
-  //
   // -----------------------
-  //
   //
   .anyware(async ({ exchange }) => {
     console.log('D: Hello! I augment the request headers.')
