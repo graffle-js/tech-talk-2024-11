@@ -18,8 +18,8 @@
     "start:pokemon": "tsx demos/assets/pokemon-schema/run-server.ts",
     "gen:sdl": "tsx demos/assets/pokemon-schema/run-generate-sdl.ts",
     "gen:graffle": "pnpm gen:sdl && graffle --schema ./demos/assets/pokemon-schema/schema.graphql --output ./demos/assets/graffle",
-    "gen:graffle2": "pnpm gen:sdl && graffle --schema ./demos/assets/pokemon-schema/schema.graphql --project ./demos/assets/project",
     "gen:graffle:remove": "rm -rf ./demos/assets/graffle",
+    "gen:graffle2": "pnpm gen:sdl && graffle --schema ./demos/assets/pokemon-schema/schema.graphql --project ./demos/assets/project",
     "gen:graffle2:remove": "rm -rf ./demos/assets/project/graffle"
   },
   "keywords": [],

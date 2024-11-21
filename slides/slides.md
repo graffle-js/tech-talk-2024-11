@@ -206,7 +206,7 @@ layout: statement
 layout: statement
 ---
 
-# TS Technique 1: Addressable Global Type Augmentation
+# TS Technique 1: <br> Addressable Global Type Augmentation
 
 <br>
 
@@ -216,7 +216,7 @@ layout: statement
 layout: statement
 ---
 
-# TS Technique 2: Type-Level Functions
+# TS Technique 2: <br> Type-Level Functions
 
 <br>
 
@@ -226,7 +226,7 @@ layout: statement
 layout: statement
 ---
 
-# TS Technique 3: Recursive Builder
+# TS Technique 3: <br> Recursive Builder
 
 <br>
 
@@ -236,7 +236,7 @@ layout: statement
 layout: statement
 ---
 
-# TS Technique 4: Type Testing
+# TS Technique 4: <br> Type Testing
 
 <br>
 
@@ -263,7 +263,9 @@ layout: statement
 layout: statement
 ---
 
-# Thanks! <fxemoji-spurtingwhale class="animate" />
+# Questions? <fxemoji-spurtingwhale class="animate" />
+
+Thanks for listening!
 
 
 https://github.com/graffle-js/tech-talk-2024-11
