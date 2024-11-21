@@ -2,9 +2,9 @@
 	--slidev-slide-container-background: #121212;
 	--slidev-theme-primary: white;
 
-	--prism-font-size: 0.75em;
-	--prism-line-height: 0.8;
-	--slidev-code-line-height: 0;
+	/* --prism-font-size: 0.75em; */
+	/* --prism-line-height: 0.8; */
+	/* --slidev-code-line-height: 0; */
 }
 
 .slidev-code {

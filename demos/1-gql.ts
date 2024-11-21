@@ -20,14 +20,24 @@ const graffle = Graffle.create({
 
 const data = await graffle
   .gql`
-    {
+    query bar {
+      pokemons {
+        id
+      }
+    }
+    mutation addPokemon($name: String!) {
+      addPokemon(name: $name) {
+        id
+      }
+    }
+    query foo {
       pokemons {
         name
         id
       }
     }
   `
-  .send()
+  .send('addPokemon', { name: 'foo' })
 
 /**
  * 3. By default we receive just the data.

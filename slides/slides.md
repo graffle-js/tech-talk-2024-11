@@ -12,15 +12,14 @@ hideInToc: true
 ---
 
 
-# GRAFFLE
+# DISCOVERING GRAFFLE
 
+<br>
 
-## A Modular Type Safe GraphQL Client for JavaScript.
-
-### Exploring Advanced Type Level Techniques
+## And Some of its TypeScript Techniques
 
 <span style="font-size: 0.6rem;color:hsla(45, 50%, 80%, 1);">
-  Animal Emojis Edition
+  <!-- Animal Emojis Edition -->
   <div class="ml-1 inline-flex flex-row gap-2">
     <fxemoji-goat />
     <fxemoji-wolfface />
@@ -34,235 +33,58 @@ hideInToc: true
 
 ---
 layout: statement
-title: Hello
-hideInToc: true
 ---
-
-<style>
-.local pre.shiki {
-  padding: 2rem!important;
-  min-width: 400px;
-}
-.local pre.shiki * {
-  font-size: 0.8rem!important;
-}
-</style>
-
-<div class="local flex flex-row items-center gap-10">
-<div>
-  <img src="./assets/jason.png" class="w-70 rounded-full inline-block"  />
-</div>
-<div class="text-left" style="font-size:1rem!important;">
-
-```ts
-interface Me {
-  name: 'Jason Kuhrt'
-  based: 'Montreal'
-  ex: [
-    'Prisma',
-    'Dialogue',
-    'littleBits',
-    ...unknown[]
-  ]
-  creator: [
-    'Paka',
-    'Graffle',
-    'Molt',
-    'Dripip',
-    'Nexus',
-    'React Popover',
-    ...unknown[]
-  ]
-  nerd: true
-  website: 'https://kuhrt.me'
-}
-
-```
-
-</div>
-</div>
-
----
-hideInToc: true
----
-
-<style>
-.slidev-toc li {
-  line-height: 0.5!important;
-  margin-left: 0;
-  list-style-type: circle;
-  font-size: 0.8rem;
-}
-.slidev-toc a {
-  border-bottom: none!important;
-}
-</style>
 
 # Plan
 
 45 minutes
 
-<toc></toc>
+<div style="text-align: left;">
+
+## `Part 1` Discovering Graffle
+
+## `Part 2` TypeScript Techniques
+
+</div>
+
 
 ---
-title: What is GraphQL?
+layout: statement
 ---
 
-# What is GraphQL?
+# `Part 1` <br> Discovering Graffle
 
-<style>
-  .slidev-layout {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-  .slidev-code-wrapper {
-    overflow: scroll;
-  }
-</style>
 
-<div class="flex justify-center gap-10 min-h-0">
-<div class="_col">
-
-Schema
-
-```graphql
-scalar DateTime
-scalar DateTimeOffset
-
-type Query {
-  user(id: ID!): User
-}
-
-type User {
-  id: ID!
-  name: String!
-  actions(
-    from: DateTimeOffset,
-    to: DateTimeOffset,
-    actionType: ActionType
-  ): [Action!]!
-}
-
-enum ActionType {
-  like
-  message
-}
-
-union Action = ActionLike | ActionMessage
-
-interface ActionBase {
-  id: ID!
-  createdAt: DateTime!
-}
-
-type ActionLike implements ActionBase {
-  user: User!
-  date: DateTime!
-}
-
-type ActionMessage implements ActionBase {
-  content: String!
-  to: User!
-  from: User!
-}
-```
-
-</div>
-<div class="_col">
-
-Request
-
-```graphql
-user(id: "abc123") {
-  name
-  messagesSince1WeekAgo: actions(
-    from: "now-1w",
-    actionType: message
-  ) {
-    __typename
-    createdAt
-    ... on ActionMessage {
-      to {
-        id
-      }
-      content
-    }
-  }
-  likesSince2MonthsAgo: actions(
-    from: "now-24h",
-    actionType: like
-  ) {
-    __typename
-    createdAt
-    ... on ActionLike {
-      user {
-        id
-      }
-    }
-  }
-}
-```
-
-</div>
-<div class="_col">
-
-Data
-
-```json
-{
-  "data": {
-    "user": {
-      "name": "John Doe",
-      "messagesSince1WeekAgo": [
-        {
-          "__typename": "ActionMessage",
-          "createdAt": "2024-01-01T22:55:43Z",
-          "to": {
-            "id": "def456"
-          },
-          "content": "Hello, world!"
-        }
-      ],
-      "likesSince2MonthsAgo": [
-        {
-          "__typename": "ActionLike",
-          "createdAt": "2023-12-15T16:12:78Z",
-          "user": {
-            "id": "ghi789"
-          }
-        }
-      ]
-    }
-  }
-}
-```
-
-</div>
-</div>
-<!--
-- So if you're not familiar with GraphQL, this slide is for you
-- I won't be going into detail about it today
--->
 
 ---
 
-# What is Graffle?
+# What is it?
 
-- A TypeScript library
-- For sending GraphQL requests
-- That (should) runs in browsers, Node, Deno, Bun
-- That has multiple transports (http, memory)
-- That has multiple interfaces (GraphQL, TypeScript)
-- That is modular
+- A TypeScript library for sending GraphQL requests
+- `npm add graffle@next`
+- Inspirations include Genql and Prisma
+- What makes it special:
+  - Document builder supporting all of GraphQL
+  - Focus on type safety
+  - Modular (e.g. transports)
 
 <img src="./assets/website.png" class="absolute right--90 top--25 scale-70" style="filter: grayscale(0.5)" />
 
 
+
+---
+layout: statement
+---
+
+# Demo Time
+
+<br>
+
+<a class="emoji-link" href="cursor://file//Users/jasonkuhrt/projects/graffle/tech-talk-2024-11/demos/1-gql.ts"><fxemoji-goat /></a>
+
 ---
 layout: image
 title: Components Overview
-# image: /assets/components.png
 ---
 
 <style>
@@ -282,16 +104,6 @@ title: Components Overview
 
 <img src="./assets/components.png" class="h-full ml-auto mr-auto" style="display:block;filter: invert(1) hue-rotate(280deg);" />
 
-
----
-layout: statement
----
-
-# Demo Time
-
-<br>
-
-<a class="emoji-link" href="cursor://file//Users/jasonkuhrt/projects/graffle/tech-talk-2024-11/demos/1-gql.ts"><fxemoji-goat /></a>
 
 ---
 layout: two-cols-header
@@ -379,7 +191,7 @@ Pull requests
 layout: statement
 ---
 
-# TS Techniques
+# `Part 2` <br> TypeScript Techniques
 
 <div class="inline-flex flex-row gap-4">
 <fxemoji-goat />
@@ -437,9 +249,9 @@ layout: statement
 - Write library code
 - Ask questions on ... (leverage [TypeScript Bug Workbench](https://www.typescriptlang.org/dev/bug-workbench/))
   - Stack Overflow, often answered by [jcalz](https://stackoverflow.com/users/2887218/jcalz) 
-  - [TypeScript Discord](https://discord.com/invite/typescript).
-  - [ArkType Discord](https://discord.com/invite/xEzdc3fJQC) ([David Blass](https://github.com/ssalbdivad)).
-  - [Effect Discord](https://discord.com/invite/effect-ts).
+  - [TypeScript Discord](https://discord.com/invite/typescript)
+  - [ArkType Discord](https://discord.com/invite/xEzdc3fJQC) ([David Blass](https://github.com/ssalbdivad))
+  - [Effect Discord](https://discord.com/invite/effect-ts)
 - Read some articles (scattered, ad-hoc)
   - Andrea Simone Costa https://andreasimonecosta.dev/posts/
   - Sandro Maglione https://sandromaglione.com
