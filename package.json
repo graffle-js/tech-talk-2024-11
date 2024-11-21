@@ -20,7 +20,8 @@
     "gen:graffle": "pnpm gen:sdl && graffle --schema ./demos/assets/pokemon-schema/schema.graphql --output ./demos/assets/graffle",
     "gen:graffle:remove": "rm -rf ./demos/assets/graffle",
     "gen:graffle2": "pnpm gen:sdl && graffle --schema ./demos/assets/pokemon-schema/schema.graphql --project ./demos/assets/project",
-    "gen:graffle2:remove": "rm -rf ./demos/assets/project/graffle"
+    "gen:graffle2:remove": "rm -rf ./demos/assets/project/graffle",
+    "gen:reset": "pnpm gen:graffle2:remove && pnpm gen:graffle:remove"
   },
   "keywords": [],
   "author": "",
