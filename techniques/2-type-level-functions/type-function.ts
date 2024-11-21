@@ -1,9 +1,9 @@
-import { assertType } from '../../lib/assert-equal.js'
+import { assertType } from '../lib/assert-equal.js'
 
 export interface TypeFunction {
-  // todo mention these must be unknown to work with the `&` (intersection operator) below
-  return: unknown
+  // This must be unknown to work with the `&` (intersection operator) below.
   parameters: unknown
+  return: unknown
 }
 
 export namespace TypeFunction {

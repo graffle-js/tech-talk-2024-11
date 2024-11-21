@@ -1,5 +1,5 @@
+import { TypeFunction } from '../../2-type-level-functions/type-function.js'
 import { _, Assert, Simplify } from '../../lib/prelude.js'
-import { TypeFunction } from './type-function.js'
 
 export interface Sushi<
   $Config extends Sushi.Config = Sushi.DefaultConfig,
