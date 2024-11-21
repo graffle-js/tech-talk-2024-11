@@ -1,13 +1,11 @@
 :root {
-	--slidev-slide-container-background: #1b1b1f;
+	--slidev-slide-container-background: #121212;
 	--slidev-theme-primary: white;
 
 	--prism-font-size: 0.75em;
 	--prism-line-height: 0.8;
 	--slidev-code-line-height: 0;
 }
-
-
 
 .slidev-code {
 	--slidev-code-background: #1b1b1f;
@@ -20,9 +18,8 @@
 	display: block;
 }
 
-html.dark #slideshow {
-	background: #1b1b1f;
-}
+/* html.dark #slideshow {
+} */
 
 ._col {
 	display: flex;

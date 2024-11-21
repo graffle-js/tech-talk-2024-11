@@ -286,9 +286,18 @@ title: Components Overview
 #slide-container:has(.slidev-page-6:not([style*="display: none"])) {
   background: black!important;
 }
+#slideshow:has(.slidev-page-6:not([style*="display: none"])) {
+	background: black!important;
+
+  .slidev-layout {
+    padding: 0!important;
+    margin: 0!important;
+  }
+}
+
 </style>
 
-<img src="./assets/components.png" class="absolute top-0 left-0" style="filter: invert(1); opacity: 1" />
+<img src="./assets/components.png" class="h-full ml-auto mr-auto" style="display:block;filter: invert(1) hue-rotate(280deg);" />
 
 
 ---
