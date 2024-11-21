@@ -31,11 +31,6 @@ hideInToc: true
   </div>
 </span>
 
-<!--
-- Hey everyone
-- I'm here today to talk about building a modular type safe GraphQL client library
-- Thanks to the Meetup organizers for having me as a speaker and to all of you for showing up today
--->
 
 ---
 layout: statement
@@ -87,22 +82,17 @@ interface Me {
 </div>
 </div>
 
-<!--
-- First off a bit about me
-- My name is Jason, I'm a Montreal-based developer with over 10 years experience
-- I studied in design but through open-source gateway drugs like Wordpress, jQuery, Node, GitHub, etc. I found my way into this world of systems building
-- I've worked on web apps, cloud services, automation, devops, architecture, libraries, etc.
-- Some places I've worked at include Prisma, Dialogue, littleBits and in a few weeks I'm joining The Guild.
-- I also work as an open source maintainer on various libraries
-- And for the past five years especially I've worked extensively with TypeScript
-- Since leaving Prisma this year I've focused my work on a new GraphQL client library called Graffle which is the basis for this talk today.
--->
-
 ---
 hideInToc: true
 ---
 
 <style>
+.slidev-toc li {
+  line-height: 0.5!important;
+  margin-left: 0;
+  list-style-type: circle;
+  font-size: 0.8rem;
+}
 .slidev-toc a {
   border-bottom: none!important;
 }
@@ -113,13 +103,6 @@ hideInToc: true
 45 minutes
 
 <toc></toc>
-
-<!--
-- Ok, so let's get started
-- I'm going to briefly introduce Graffle
-- Then we'll spend most of the time diving into implementation details of various features that have advanced type level logic
-- Feel free to ask questions at any time if something isn't clear to you
--->
 
 ---
 title: What is GraphQL?
