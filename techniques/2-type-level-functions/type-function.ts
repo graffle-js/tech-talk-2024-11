@@ -21,7 +21,7 @@ export namespace TypeFunction {
 //
 //
 
-interface Plus1 {
+interface Plus1 extends TypeFunction {
   parameters: string
   return: `${this['parameters']}+1`
 }
