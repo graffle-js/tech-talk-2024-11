@@ -30,7 +30,7 @@ const pokemons = await graffle.query.pokemons({
   /**
    * 4. Alias a field selection multiple times.
    */
-  hp: [['hp2', true], ['hp3', true]],
+  hp: [['hp1', true], ['hp2', true]],
   /**
    * 5. Select Object types with plain objects.
    */
@@ -58,8 +58,8 @@ assertType<
   null | {
     name: string //         (2) Scalar selection.
     id2: string //          (3) Field via alias.
-    hp2: number //          (4) Field 1/2 via alias.
-    hp3: number //          (4) Field 2/2 via alias.
+    hp1: number //          (4) Field 1/2 via alias.
+    hp2: number //          (4) Field 2/2 via alias.
     trainer: null | { //    (5) Object selection.
       name: null | string
       fans: null //         (6) Null because of field directive.

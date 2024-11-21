@@ -55,7 +55,7 @@ import { schemaMap } from './assets/graffle/_.js'
 
   const result = await graffle.query.pokemons({
     name: true,
-    birthday: [['birthday', true], ['birthday2', true]],
+    birthday: true,
   })
 
   // Now observe how birthday is decoded as a JavaScript Date instance.
@@ -93,7 +93,7 @@ import { Graffle as Graffle2 } from './assets/project/graffle/__.js'
 
   const result = await graffle.query.pokemons({
     name: true,
-    birthday: [['birthday', true], ['birthday2', true]],
+    birthday: true,
   })
 
   // Same result!

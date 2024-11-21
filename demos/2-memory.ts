@@ -10,7 +10,7 @@ const graffle = Graffle.create({
 })
 
 const data = await graffle.gql`
-  {
+  query {
     pokemons {
       name
       id

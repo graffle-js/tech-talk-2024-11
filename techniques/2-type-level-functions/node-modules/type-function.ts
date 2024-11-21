@@ -27,6 +27,7 @@ interface Plus1 {
 }
 
 assertType<TypeFunction.Apply<Plus1, '0'>, '0+1'>()
+assertType<TypeFunction.Apply<Plus1, TypeFunction.Apply<Plus1, '0'>>, '0+1+1'>()
 
 interface MergeA1 {
   parameters: {}
