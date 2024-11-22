@@ -6,12 +6,10 @@ export interface TypeFunction {
   return: unknown
 }
 
-export namespace TypeFunction {
-  export type Apply<
-    $TypeFunction extends TypeFunction,
-    $Arguments,
-  > = ($TypeFunction & { parameters: $Arguments })['return']
-}
+export type Apply<
+  $TypeFunction extends TypeFunction,
+  $Arguments,
+> = ($TypeFunction & { parameters: $Arguments })['return']
 
 //
 //
@@ -26,12 +24,12 @@ interface Plus1 extends TypeFunction {
   return: `${this['parameters']}+1`
 }
 
-assertType<TypeFunction.Apply<Plus1, '0'>, '0+1'>()
-assertType<TypeFunction.Apply<Plus1, TypeFunction.Apply<Plus1, '0'>>, '0+1+1'>()
+assertType<Apply<Plus1, '0'>, '0+1'>()
+assertType<Apply<Plus1, Apply<Plus1, '0'>>, '0+1+1'>()
 
 interface MergeA1 {
   parameters: {}
   return: this['parameters'] & { a: 1 }
 }
 
-assertType<TypeFunction.Apply<MergeA1, { b: 2 }>, { a: 1; b: 2 }>()
+assertType<Apply<MergeA1, { b: 2 }>, { a: 1; b: 2 }>()

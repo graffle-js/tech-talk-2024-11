@@ -50,8 +50,8 @@ dependencies:
     specifier: ^7.1.0
     version: 7.1.0
   graffle:
-    specifier: 8.0.0-next.132
-    version: 8.0.0-next.132(@dprint/formatter@0.4.1)(@dprint/typescript@0.93.2)(graphql@16.9.0)
+    specifier: 8.0.0-next.133
+    version: 8.0.0-next.133(@dprint/formatter@0.4.1)(@dprint/typescript@0.93.2)(graphql@16.9.0)
   graphql:
     specifier: ^16.9.0
     version: 16.9.0
@@ -3954,8 +3954,8 @@ packages:
     resolution: {integrity: sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ==}
     dev: false
 
-  /graffle@8.0.0-next.132(@dprint/formatter@0.4.1)(@dprint/typescript@0.93.2)(graphql@16.9.0):
-    resolution: {integrity: sha512-qc4hFwI3g1/wiDeVMOIA58kaH59tn/xFdK9sH5753JFwIoOwTnWMa8rc7OndiwFtt44lt3VcIZ+F8cwb5vyTzw==}
+  /graffle@8.0.0-next.133(@dprint/formatter@0.4.1)(@dprint/typescript@0.93.2)(graphql@16.9.0):
+    resolution: {integrity: sha512-+mML0aqfMFOtt8xidspb8bShbd294h8VzpfD2k77LBBRxrUtw9cTsIeS8EZKM4HOtuMjXfu8mCXh+x2IIuRoJg==}
     hasBin: true
     peerDependencies:
       '@dprint/formatter': ^0.4.0

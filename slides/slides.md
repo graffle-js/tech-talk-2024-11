@@ -171,18 +171,6 @@ Soon:
 ```
 
 </div>
----
-# layout: statement
----
-
-# Can I help?
-
-## Yes!
-
-- Bug reports
-- Experience reports
-- Feature requests
-- Pull requests
 
 ---
 layout: statement

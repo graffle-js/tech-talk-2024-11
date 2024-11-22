@@ -62,7 +62,7 @@ assertType<
     hp2: number //          (4) Field 2/2 via alias.
     trainer: null | { //    (5) Object selection.
       name: null | string
-      fans: null //         (6) Null because of field directive.
+      // fans //            (6) Gone because of field directive.
     }
     defense?: number //     (7) Optional because of fragment directive.
   }[]
