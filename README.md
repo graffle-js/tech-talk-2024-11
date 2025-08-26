@@ -1,5 +1,3 @@
-# Imagining the Future of GraphQL Documentation Tooling
+# Tech talk at Montreal TypeScript Meetup 2024/11
 
-Tech talk at GraphQL Conf 2025
-
-https://graphql.org/conf/2025/schedule/6c9b846e538e001af3db938d771d1178
+https://www.meetup.com/typescript-montreal/events/302867057
